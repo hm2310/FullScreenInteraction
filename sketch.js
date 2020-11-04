@@ -7,6 +7,8 @@ var randomIndex;
 var index = 0;
 let slider;
 
+
+
 let buttonChangeword;
 let buttonChangebackground;
 
@@ -44,14 +46,16 @@ function draw() {
   background(redx,greenx,bluex);
   xpos = xpos + xspeed * xdirection;
   ypos = ypos + yspeed * ydirection;
+  
+  xpos = constrain(xpos, 0+cSize/2, width-cSize/2);
+  ypos = constrain(ypos, 0+cSize/2, height-cSize/2);
   if (xpos > width - 150 || xpos < 60) {
     xdirection *= -1;
   }
   if (ypos > height - 40 || ypos < 40) {
     ydirection *= -1;
   }
-  xpos = constrain(xpos, 0+cSize/2, width-cSize/2);
-  ypos = constrain(ypos, 0+cSize/2, height-cSize/2);
+
 
   
   textSize(36);
