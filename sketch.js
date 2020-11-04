@@ -44,8 +44,8 @@ function changeback(){
 
 function draw() {
   background(redx,greenx,bluex);
-  xpos = xpos + xspeed * xdirection;
-  ypos = ypos + yspeed * ydirection;
+  xpos += xdirection;
+  ypos += ydirection;
   
   xpos = constrain(xpos, 0+cSize/2, width-cSize/2);
   ypos = constrain(ypos, 0+cSize/2, height-cSize/2);
